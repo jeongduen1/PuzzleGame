@@ -3,10 +3,10 @@ using UnityEngine;
 public class LightTile : Tile
 {
     public bool isOn = false;
-    public SpriteRenderer myRenderer;
+    private SpriteRenderer myRenderer;
     public Sprite onSprite, offSprite;
 
-    private void Start()
+    void Start()
     {
         myRenderer = GetComponent<SpriteRenderer>();
         UpdateSprite();

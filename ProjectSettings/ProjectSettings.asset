@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: 0a456f8cc53d26243a2bd9c7b1114197
+  productGUID: 028746b6e159a2844a063f220122e4ac
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: RealLightPuzzle
+  productName: LightPuzzleGame
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -141,7 +141,8 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 1.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -595,14 +596,14 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: RealLightPuzzle
+  metroPackageName: LightPuzzleGame
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: RealLightPuzzle
+  metroApplicationDescription: LightPuzzleGame
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -673,10 +674,10 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: d1a0efaa-7a3a-49ec-958d-9f3ef52e18e7
+  cloudProjectId: b1d83f81-eff7-4ed2-b377-6046e534e43a
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: RealLightPuzzle
+  projectName: LightPuzzleGame 2025-04-20_22-01-24
   organizationId: sanduen1
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

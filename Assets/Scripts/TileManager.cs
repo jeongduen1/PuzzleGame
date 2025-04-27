@@ -4,25 +4,35 @@ public class TileManager : MonoBehaviour
 {
     public static TileManager Instance;
     public GameObject lightPrefab, switchPrefab, emptyPrefab;
-    string[] mapData = new string[] {
-        "EEESEEE",
-        "ESLLEEE",
-        "ESLLSEE",
-        "EEELEEE",
-        "EEESEEE"
-    };
+    public Transform tileParent;
+    public Camera camera;
+    string[] mapData = new string[] {};
 
     private Tile[,] tiles;
 
     void Awake() => Instance = this;
 
-    void Start() => GenerateMap();
-
-    void GenerateMap()
+    void Start()
     {
+        GenerateMap(GameManager.Instance.selectedStageIndex);
+    }
+
+    void GenerateMap(int index)
+    {
+        mapData = StageManager.Instance.stages[index];
+
         int height = mapData.Length;
         int width = mapData[0].Length;
         tiles = new Tile[width, height];
+
+        if (height % 2 == 0)
+        {
+            camera.transform.position = new Vector3((width + 1) / 2 - 0.5f, -((height + 1) / 2 - 0.5f), -10);
+        }
+        else
+        {
+            camera.transform.position = new Vector3((width - 1) / 2, -((height - 1) / 2), -10);
+        }
 
         for (int y = 0; y < height; y++)
         {
@@ -37,7 +47,7 @@ public class TileManager : MonoBehaviour
                     _ => emptyPrefab,
                 };
 
-                GameObject go = Instantiate(prefab, new Vector3(x, -y, 0), Quaternion.identity);
+                GameObject go = Instantiate(prefab, new Vector3(x, -y, 0), Quaternion.identity, tileParent);
                 Tile tile = go.GetComponent<Tile>();
                 tile.x = x;
                 tile.y = y;
